@@ -19,6 +19,7 @@ Fri Nov  4 12:55:01 2022
 $ nvcc matrix_Multiplication.cu  -o mult
 
 $ ./mult
+CudaDevice found! Device count: 8
 Enter m n n k :
 256 256 256 256
 GPU time= 0.039680 ms

@@ -8,6 +8,8 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <ctime>
+
 #define BLOCK_SIZE 16
 
 /*
@@ -152,6 +154,15 @@ __global__ void multiply(float *left, float *right, float *res, int dim) {
 // main routine that executes on the host
 int main(void)
 {
+
+	int device_count = 0;
+	    cudaGetDeviceCount(&device_count);
+	
+		if (device_count == 0)
+			printf("Sorry! You dont have CudaDevice \n");
+		else
+			printf("CudaDevice found! Device count: %d \n", device_count);
+    
     //size of the vectors to be processed  and matrix dimensions
     int Left_matrix_x, Left_matrix_y, Right_matrix_x, Right_matrix_y, Left_vector_size, Right_vector_size;
 
