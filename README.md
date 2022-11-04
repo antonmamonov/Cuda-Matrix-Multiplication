@@ -1,4 +1,4 @@
-# Simple CUDA matrix multiplication test
+# Simple & Quick CUDA matrix multiplication
 
 ## Prerequisites
 
